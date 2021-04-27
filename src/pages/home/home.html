@@ -4,34 +4,33 @@
   <form [formGroup]="formGroup" (ngSubmit)="enviaFuncionario(); $event.preventDefault()">
 
     <ion-item>
-      <ion-label stacked >ID</ion-label>
-      <ion-input formControlName="id" type= "text"></ion-input>
-    </ion-item>
-
-    <ion-item>
       <ion-label stacked>Nome</ion-label>
       <ion-input formControlName="nome" type= "text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls['nome'].dirty && formGroup.controls['nome'].errors" margin-left>Valor inválido</p>
 
     <ion-item>
       <ion-label stacked>Sobrenome</ion-label>
       <ion-input formControlName="sobrenome" type= "text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls['sobrenome'].dirty && formGroup.controls['sobrenome'].errors" margin-left>Valor inválido</p>
 
     <ion-item>
       <ion-label stacked>E-mail</ion-label>
       <ion-input formControlName="email" type= "text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls['email'].dirty && formGroup.controls['email'].errors" margin-left>Valor inválido</p>
 
     <ion-item>
       <ion-label stacked>Número PIS</ion-label>
       <ion-input formControlName="pis" type= "text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls['pis'].dirty && formGroup.controls['pis'].errors" margin-left>Valor inválido</p>
 
-    <button ion-button >Cadastrar</button>
+    <button ion-button type="submit" [disabled]="formGroup.invalid">Cadastrar</button>
 
   </form>
 
-  <button ion-button (click)="">Deletar</button>
+  <button ion-button type="submit">Deletar</button>
 
 </ion-content>

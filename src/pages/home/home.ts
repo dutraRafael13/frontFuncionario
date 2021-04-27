@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IonicPage, NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { FuncionarioService } from '../../services/domain/funcionario.service';
 
-@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
