@@ -1,36 +1,37 @@
 <ion-content padding>
   <h3>Cadastro de funcionários</h3>
 
-  <form>
+  <form [formGroup]="formGroup" (ngSubmit)="enviaFuncionario(); $event.preventDefault()">
 
     <ion-item>
       <ion-label stacked >ID</ion-label>
-      <ion-input type= "text"></ion-input>
+      <ion-input formControlName="id" type= "text"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Nome</ion-label>
-      <ion-input type= "text"></ion-input>
+      <ion-input formControlName="nome" type= "text"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Sobrenome</ion-label>
-      <ion-input type= "text"></ion-input>
+      <ion-input formControlName="sobrenome" type= "text"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>E-mail</ion-label>
-      <ion-input type= "text"></ion-input>
+      <ion-input formControlName="email" type= "text"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Número PIS</ion-label>
-      <ion-input type= "text"></ion-input>
+      <ion-input formControlName="pis" type= "text"></ion-input>
     </ion-item>
 
-    <button ion-button >Enviar</button>
-    <button ion-button >Deletar</button>
+    <button ion-button >Cadastrar</button>
 
   </form>
+
+  <button ion-button (click)="">Deletar</button>
 
 </ion-content>
