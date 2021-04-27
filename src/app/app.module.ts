@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FuncionarioService } from '../services/domain/funcionario.service';
+import { ErrorInterceptorProvider } from '../interceptors/error-interceptior';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FuncionarioService } from '../services/domain/funcionario.service';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    FuncionarioService
+    FuncionarioService,
+    ErrorInterceptorProvider
   ]
 })
 export class AppModule {}

@@ -19,8 +19,9 @@ export class HomePage {
         nome: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
         sobrenome: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
         email: ['', [Validators.required, Validators.email]],
-        pis: ['', [Validators.required, Validators.minLength(11)]]
+        numeroPIS: ['', [Validators.required, Validators.minLength(11)]]
       });
   }
+
 
 }

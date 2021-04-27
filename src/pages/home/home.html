@@ -23,9 +23,9 @@
 
     <ion-item>
       <ion-label stacked>Número PIS</ion-label>
-      <ion-input formControlName="pis" type= "text"></ion-input>
+      <ion-input formControlName="numeroPIS" type= "text"></ion-input>
     </ion-item>
-    <p class="danger" *ngIf="formGroup.controls['pis'].dirty && formGroup.controls['pis'].errors" margin-left>Valor inválido</p>
+    <p class="danger" *ngIf="formGroup.controls['numeroPIS'].dirty && formGroup.controls['numeroPIS'].errors" margin-left>Valor inválido</p>
 
     <button ion-button type="submit" [disabled]="formGroup.invalid">Cadastrar</button>
 
